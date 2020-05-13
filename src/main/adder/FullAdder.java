@@ -1,4 +1,7 @@
-package main;
+package main.adder;
+
+import main.gate.OrGate;
+import main.model.Wire;
 
 public class FullAdder {
     private Wire s = new Wire("s");

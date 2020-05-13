@@ -1,4 +1,9 @@
-package main;
+package main.adder;
+
+import main.gate.AndGate;
+import main.gate.Inverter;
+import main.gate.OrGate;
+import main.model.Wire;
 
 /**
  * 半加器

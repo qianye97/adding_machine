@@ -1,5 +1,10 @@
 package main;
 
+import main.adder.FullAdder;
+import main.model.Result;
+import main.model.Wire;
+import main.util.Schedule;
+
 /**
  * 测试用例
  */

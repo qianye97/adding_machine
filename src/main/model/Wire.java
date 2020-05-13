@@ -1,4 +1,6 @@
-package main;
+package main.model;
+
+import main.service.Action;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,7 +23,7 @@ public class Wire {
         actions = new ArrayList<>();
         this.name = name;
     }
-    void acceptAction(Action action) {
+    public void acceptAction(Action action) {
         actions.add(action);
     }
 

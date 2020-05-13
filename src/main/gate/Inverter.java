@@ -1,4 +1,8 @@
-package main;
+package main.gate;
+
+import main.util.Schedule;
+import main.Test;
+import main.model.Wire;
 
 /**
  * 非门

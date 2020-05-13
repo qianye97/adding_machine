@@ -1,4 +1,8 @@
-package main;
+package main.gate;
+
+import main.util.Schedule;
+import main.Test;
+import main.model.Wire;
 
 /**
  * 与门
@@ -20,7 +24,7 @@ public class AndGate {
     }
 
     public void registerAction() {
-        a.acceptAction(()->Schedule.afterDelay(Test.schedule, 3, this::getNewOutput));
+        a.acceptAction(()-> Schedule.afterDelay(Test.schedule, 3, this::getNewOutput));
         b.acceptAction(()->Schedule.afterDelay(Test.schedule, 3, this::getNewOutput));
     }
 

@@ -1,4 +1,6 @@
-package main;
+package main.util;
+
+import main.service.Action;
 
 import java.util.ArrayDeque;
 import java.util.LinkedList;
@@ -23,6 +25,7 @@ public class Schedule {
 
     Action firstAction() {
         if(!isEmpty()) {
+            this.currentTime = segments.getFirst().time;
             return segments.getFirst().actions.peek();
         }
         return null;
@@ -87,20 +90,12 @@ public class Schedule {
 
     public static void propogate(Schedule schedule) {
         while(!schedule.isEmpty()) {
-            Action action = schedule.firstAction();
+            schedule.firstAction().action();
             schedule.removeFirstAction();
-            action.action();
         }
     }
 
     public static void afterDelay(Schedule schedule, int delay, Action action) {
         schedule.addAction(delay + schedule.getCurrentTime(), action);
-    }
-
-    public static void main(String[] args) {
-        Schedule schedule = new Schedule();
-        schedule.addAction(3, ()->System.out.println("world"));
-        schedule.addAction(3, ()->System.out.println("hello"));
-        propogate(schedule);
     }
 }
