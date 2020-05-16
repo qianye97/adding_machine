@@ -3,6 +3,7 @@
 + 项目是[sicp](https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-23.html "")上的一个demo
 + 使用java实现数字电路模拟程序
 ## 设计思路
+![测试图片](https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2534506313,1688529724&fm=26&gp=0.jpg)
 + 数字电路的计算模型
   + 导线：接收和传输数字信号。
   + 门器件(与门、或门、非门):作用类似于函数，接收输入导线的数字信号，经过逻辑计算，将计算结果置于输出导线的数字信号中。
